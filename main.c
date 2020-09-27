@@ -3,6 +3,7 @@
 
 int main(int argc, char **argv)
 {
-    printf("%c", (char)ft_tolower('A'));
+    char *src = "abbbbbbbb";
+    printf("%s", ft_strrchr(src, 'a'));
     return 0;
 }

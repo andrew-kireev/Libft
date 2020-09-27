@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/27 20:53:53 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/27 21:22:51 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,8 @@ int		ft_isdigit(int digit);
 int		ft_isalnum(int ch);
 int		ft_isascii(int ch);
 int		ft_isprint(int ch);
+char	*ft_strchr(char *str, char ch);
+char	*ft_strrchr(char *str, char ch);
+int		ft_strncmp(char *str1, char *str2, size_t n);
 
 #endif
