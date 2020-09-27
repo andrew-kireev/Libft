@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/27 17:03:18 by fgwyneth         ###   ########.fr       */
+/*   Created: 2020/09/27 17:17:00 by fgwyneth          #+#    #+#             */
+/*   Updated: 2020/09/27 17:25:06 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
+void	*ft_memcpy(void *destptr, const void *srcptr, size_t num)
+{
+	size_t		i;
 
-void	*ft_memset(void *b, int c, size_t len);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-void	ft_bzero(void *s , size_t  n);
-
-#endif
+	i = 0;
+	if (destptr == NULL && srcptr == NULL)
+		return (NULL);
+	while (i != num)
+	{
+		((char*)destptr)[i] = ((char*)srcptr)[i];
+		i++;
+	}
+	return (destptr);
+}

@@ -6,7 +6,7 @@
 #    By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by fgwyneth          #+#    #+#              #
-#    Updated: 2020/09/27 16:48:01 by fgwyneth         ###   ########.fr        #
+#    Updated: 2020/09/27 17:21:43 by fgwyneth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME		= libft.a
 CFLAGS		= -Wall -Werror -Wextra -I. -c
 FILES		= ft_memset.c  \
 			  ft_tolower.c \
-			  ft_toupper.c
+			  ft_toupper.c \
+			  ft_bzero.c   \
+			  ft_memcpy.c
 
 OBJ			= $(FILES:%.c=%.o)
 
