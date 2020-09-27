@@ -6,7 +6,7 @@
 #    By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by fgwyneth          #+#    #+#              #
-#    Updated: 2020/09/27 22:52:57 by fgwyneth         ###   ########.fr        #
+#    Updated: 2020/09/27 23:29:59 by fgwyneth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,9 @@ FILES		= ft_memset.c  \
 			  ft_putchar_fd.c \
 			  ft_putchar.c \
 			  ft_putstr_fd.c \
+			  ft_putnbr_fd.c \
+			  ft_atoi.c \
+			  ft_putendl_fd.c \
 			  
 
 OBJ			= $(FILES:%.c=%.o)
