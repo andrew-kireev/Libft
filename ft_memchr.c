@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/27 17:51:40 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/27 18:31:09 by fgwyneth         ###   ########.fr       */
+/*   Created: 2020/09/27 18:05:57 by fgwyneth          #+#    #+#             */
+/*   Updated: 2020/09/27 18:29:59 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memchr(void *buff, int ch, size_t count)
 {
 	size_t		i;
 
 	i = 0;
-	if (dst == NULL && src == NULL)
-		return (NULL);
-	if (src < dst)
+	while (i != count)
 	{
-		while ((int)(--len) >= 0)
-		{
-			((char*)dst)[len] = ((char*)src)[len];
-		}
-		return (dst);
-	}
-	while (i != len)
-	{
-		((char*)dst)[i] = ((char*)src)[i];
+		if (((char*)buff)[i] == ch)
+			return (buff + i);
 		i++;
 	}
-	return (dst);
+	return (NULL);
 }
