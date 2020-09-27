@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/27 20:41:51 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/27 20:53:53 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,8 @@ int		ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 int		ft_strlen(const char *str);
 int		ft_isalpha(int ch);
 int		ft_isdigit(int digit);
+int		ft_isalnum(int ch);
+int		ft_isascii(int ch);
+int		ft_isprint(int ch);
 
 #endif
