@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/27 16:23:25 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/27 16:46:03 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-void    *ft_memset(void *b, int c, size_t len);
-int     ft_tolower(int c);
+void	*ft_memset(void *b, int c, size_t len);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 #endif
