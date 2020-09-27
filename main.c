@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-    char *src = "abbbbbbbb";
-    printf("%s", ft_strrchr(src, 'a'));
+    char c = 0xe2;
+    ft_putchar(c);
     return 0;
 }
