@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/27 17:03:18 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/27 17:30:48 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 void	*ft_memset(void *b, int c, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-void	ft_bzero(void *s , size_t  n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *destptr, const void *srcptr, size_t num);
+void	*ft_memccpy(void *dest, const void *source, int ch, size_t count);
 
 #endif

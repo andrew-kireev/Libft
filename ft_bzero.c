@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 17:03:35 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/27 17:13:05 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/27 17:29:57 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t		i;
-	char	*ptr;
+	char		*ptr;
 
 	i = 0;
 	ptr = (char*)s;
