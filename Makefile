@@ -6,7 +6,7 @@
 #    By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by fgwyneth          #+#    #+#              #
-#    Updated: 2020/09/28 20:26:03 by fgwyneth         ###   ########.fr        #
+#    Updated: 2020/09/28 22:18:53 by fgwyneth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,9 @@ FILES		= ft_memset.c  \
 			  ft_calloc.c \
 			  ft_strdup.c \
 			  ft_strnstr.c \
+			  ft_strmapi.c \
+			  ft_strtrim.c \
+			  ft_lstnew.c \
 			  
 
 OBJ			= $(FILES:%.c=%.o)

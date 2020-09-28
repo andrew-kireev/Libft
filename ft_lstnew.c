@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/27 22:51:39 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/28 22:37:18 by fgwyneth         ###   ########.fr       */
+/*   Created: 2020/09/28 22:10:36 by fgwyneth          #+#    #+#             */
+/*   Updated: 2020/09/28 22:32:03 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+t_list		*ft_lstnew(void const *content, size_t content_size)
 {
-	if (!s)
-		return ;
-	if (fd > 0)
-		while (*s != '\0')
+	t_list	*node;
+
+	if (!(node = (t_list*)malloc(sizeof(t_list))))
+		return (NULL);
+	if (!content)
+	{
+		node->content = NULL;
+		node->content_size = 0;
+	}
+	else
+	{
+		if (!(node->content = malloc(content_size)))
 		{
-			ft_putchar_fd(*s, fd);
-			s++;
+			free(node);
+			return (NULL);
 		}
+		ft_memcpy(node->content, content, content_size);
+		node->content_size = content_size;
+	}
+	node->next = NULL;
+	return (node);
 }

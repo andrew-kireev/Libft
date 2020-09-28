@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 23:18:57 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/28 20:30:13 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/28 22:34:08 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ int		ft_atoi(char *str)
 			result += (str[i] - '0');
 		}
 		i++;
-		// if (result > 2147483648 || result < -2147483648)
-		// return (0);
 	}
 	if (minus == 1)
 		result = -result;
