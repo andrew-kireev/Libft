@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/28 20:09:49 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/28 20:25:51 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ int		ft_atoi(char *str);
 void	ft_putendl(char const *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 void	*ft_calloc(size_t num, size_t size);
+char	*ft_strdup(const char *str);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
