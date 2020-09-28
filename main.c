@@ -3,7 +3,10 @@
 
 int main(int argc, char **argv)
 {
-    char c = 0xe2;
-    ft_putchar(c);
+    char n[40] = "-99999999999999999999999999";
+    int i1 = atoi(n);
+    int i2 = ft_atoi(n);
+    printf("ft_atoi = %d\n", i2);
+    printf("atoi = %d\n", i1);
     return 0;
 }
