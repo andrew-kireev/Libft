@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/29 11:08:44 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/29 12:50:03 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,8 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void (*del)(void *, size_t));
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
+char 				**ft_split(char const *s, char c);
+char 				*ft_strtrim(char const *s);
 
 #endif
