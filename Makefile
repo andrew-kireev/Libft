@@ -6,7 +6,7 @@
 #    By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by fgwyneth          #+#    #+#              #
-#    Updated: 2020/09/28 23:07:18 by fgwyneth         ###   ########.fr        #
+#    Updated: 2020/09/29 10:18:25 by fgwyneth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,9 @@ FILES		= ft_memset.c  \
 			  ft_lstnew.c \
 			  ft_lstdelone.c \
 			  ft_lstdel.c \
+			  ft_lstsize.c \
+			  ft_lstadd_back.c \
+			  ft_lstlast.c \
 			  
 
 OBJ			= $(FILES:%.c=%.o)
