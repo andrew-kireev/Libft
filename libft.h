@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/29 10:20:10 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/29 11:08:44 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,11 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstadd_front(t_list **lst, t_list *new);
+void				ft_lstclear(t_list **lst, void (*del)(void *, size_t));
+void				ft_lstiter(t_list *lst, void (*f)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+void (*del)(void *, size_t));
+char				*ft_strjoin(char const *s1, char const *s2);
 
 #endif
