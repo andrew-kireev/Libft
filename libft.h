@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 15:45:01 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/29 12:50:03 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/30 00:54:40 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,8 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void (*del)(void *, size_t));
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
-char 				**ft_split(char const *s, char c);
-char 				*ft_strtrim(char const *s);
+char				**ft_split(char const *s, char c);
+char				*ft_strtrim(char const *s);
+char				*ft_itoa(int n);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 11:35:56 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/29 12:49:11 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/30 00:55:07 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,4 @@ size_t		count_words(char const *s, char c)
 		i++;
 	}
 	return (num + 1);
-}
-
-char		**ft_split(char const *s, char c)
-{
-	
 }

@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 20:41:35 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/29 13:03:43 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/09/30 00:54:09 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ static size_t		find_end(char const *s)
 	int		i;
 
 	i = ft_strlen(s) - 1;
-	while (s[i] && (s[i] == ' ' || s[i] == '\n' ||
-	s[i] == '\t'))
+	while ((s[i] == ' ' || s[i] == '\n' ||
+	s[i] == '\t') && i != 0)
 		i--;
 	return (i);
 }
 
-static char  		*zero_str(void)
+static char			*zero_str(void)
 {
 	char	*str;
 
@@ -43,7 +43,6 @@ static char  		*zero_str(void)
 	*str = '\0';
 	return (str);
 }
-
 
 char				*ft_strtrim(char const *s)
 {
@@ -57,7 +56,7 @@ char				*ft_strtrim(char const *s)
 		return (NULL);
 	begin = find_begin(s);
 	end = find_end(s);
-	if (!s[0])
+	if (s[0] == '\0')
 		return ((char*)s);
 	if (end == 0)
 		return (zero_str());

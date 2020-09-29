@@ -6,7 +6,7 @@
 #    By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by fgwyneth          #+#    #+#              #
-#    Updated: 2020/09/29 13:04:08 by fgwyneth         ###   ########.fr        #
+#    Updated: 2020/09/30 00:30:34 by fgwyneth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ FILES		= ft_memset.c  \
 			  ft_lstmap.c	\
 			  ft_strjoin.c	\
 			  ft_substr.c 	\
+			  ft_itoa.c 	\
 			
 			  
 
