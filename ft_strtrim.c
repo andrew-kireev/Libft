@@ -12,24 +12,39 @@
 
 #include "libft.h"
 
-static size_t		find_begin(char const *s)
+int in_set(char const *set, char symbol)
+{
+    int 	in_set;
+
+    in_set = 0;
+    while (*set != '\0')
+	{
+    	if (*set == symbol)
+		{
+			in_set = 1;
+			break ;
+		}
+		++set;
+	}
+    return in_set;
+}
+
+static size_t		find_begin(char const *s, char const *set)
 {
 	int		i;
 
 	i = 0;
-	while (s[i] && (s[i] == ' ' || s[i] == '\n' ||
-	s[i] == '\t'))
+	while (s[i] && in_set(set, s[i]))
 		i++;
 	return (i);
 }
 
-static size_t		find_end(char const *s)
+static size_t		find_end(char const *s, char const *set)
 {
 	int		i;
 
 	i = ft_strlen(s) - 1;
-	while ((s[i] == ' ' || s[i] == '\n' ||
-	s[i] == '\t') && i != 0)
+	while (in_set(set, s[i]) && i != 0)
 		i--;
 	return (i);
 }
@@ -44,7 +59,7 @@ static char			*zero_str(void)
 	return (str);
 }
 
-char				*ft_strtrim(char const *s)
+char				*ft_strtrim(char const *s, char const *set)
 {
 	char		*new_str;
 	size_t		begin;
@@ -54,8 +69,8 @@ char				*ft_strtrim(char const *s)
 	i = 0;
 	if (!s)
 		return (NULL);
-	begin = find_begin(s);
-	end = find_end(s);
+	begin = find_begin(s, set);
+	end = find_end(s, set);
 	if (s[0] == '\0')
 		return ((char*)s);
 	if (end == 0)

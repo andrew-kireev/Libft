@@ -12,54 +12,56 @@
 
 #include "libft.h"
 
-int		c_n(char nb)
+static int	is_digit(char nb)
 {
 	if (nb >= '0' && nb <= '9')
 		return (1);
 	return (0);
 }
 
-int		c_p_m(char c)
-{
-	if (c == '-' || c == '+')
-		return (1);
-	return (0);
-}
-
-int		c_begin(char c)
+static int	is_space(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n'
-			|| c == '\v' || c == '\r'
-			|| c == '\f')
+	|| c == '\v' || c == '\r'
+	|| c == '\f')
 		return (1);
 	return (0);
 }
 
-int		ft_atoi(char *str)
+static int	check_res(long long result)
 {
-	int				i;
-	long long int	result;
-	int				minus;
+	if (result > 2147483647)
+		return (0);
+	if (result < -2147483648)
+		return (-1);
+	return (result);
+}
 
-	minus = 0;
+int			ft_atoi(const char *str)
+{
+	long int		result;
+	int				minus;
+	int				i;
+
 	i = 0;
+	minus = 0;
 	result = 0;
-	while (c_begin(str[i]))
+	while (is_space(str[i]))
 		i++;
-	while (str[i] != '\0' && (c_n(str[i]) || (c_p_m(str[i]) && result == 0)))
-	{
-		if (str[i] == '-' && minus == 1)
-			minus = 0;
-		else if (str[i] == '-' && minus == 0)
+	if (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
 			minus = 1;
-		if (str[i] >= '0' && str[i] <= '9')
-		{
-			result *= 10;
-			result += (str[i] - '0');
-		}
+	while (str[i] != '\0' && is_digit(str[i]))
+	{
+		if (result >= 2147483647 && minus == 0)
+			return (-1);
+		if (result >= 2147483648 && minus == 1)
+			return (0);
+		result *= 10;
+		result += (str[i] - '0');
 		i++;
 	}
 	if (minus == 1)
 		result = -result;
-	return (result);
+	return (check_res(result));
 }

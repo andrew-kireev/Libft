@@ -6,12 +6,12 @@
 #    By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by fgwyneth          #+#    #+#              #
-#    Updated: 2020/09/30 00:30:34 by fgwyneth         ###   ########.fr        #
+#    Updated: 2020/10/29 12:27:05 by fgwyneth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
-CFLAGS		= -Wall -Werror -Wextra -I. -c
+CFLAGS		= -Wall -Werror -Wextra -I. libft.h -c
 FILES		= ft_memset.c  \
 			  ft_tolower.c \
 			  ft_toupper.c \
@@ -36,7 +36,6 @@ FILES		= ft_memset.c  \
 			  ft_putstr_fd.c \
 			  ft_putnbr_fd.c \
 			  ft_atoi.c \
-			  ft_putendl_fd.c \
 			  ft_strlcat.c \
 			  ft_calloc.c \
 			  ft_strdup.c \
@@ -56,6 +55,8 @@ FILES		= ft_memset.c  \
 			  ft_strjoin.c	\
 			  ft_substr.c 	\
 			  ft_itoa.c 	\
+			  ft_split.c	\
+			  ft_putendl_fd.c \
 			
 			  
 

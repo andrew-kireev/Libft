@@ -6,7 +6,7 @@
 /*   By: fgwyneth <fgwyneth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 11:17:38 by fgwyneth          #+#    #+#             */
-/*   Updated: 2020/09/29 11:24:42 by fgwyneth         ###   ########.fr       */
+/*   Updated: 2020/10/29 19:24:07 by fgwyneth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t		i;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	if (!(new_str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	if (start >= (unsigned int)ft_strlen(s))
