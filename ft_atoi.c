@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-static int	is_digit(char nb)
-{
-	if (nb >= '0' && nb <= '9')
-		return (1);
-	return (0);
-}
-
 static int	is_space(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n'
@@ -51,7 +44,7 @@ int			ft_atoi(const char *str)
 	if (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')
 			minus = 1;
-	while (str[i] != '\0' && is_digit(str[i]))
+	while (str[i] != '\0' && ft_isdigit(str[i]))
 	{
 		if (result >= 2147483647 && minus == 0)
 			return (-1);
