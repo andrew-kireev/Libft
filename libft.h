@@ -58,7 +58,7 @@ typedef struct		s_list
 }					t_list;
 
 t_list				*ft_lstnew(void const *content);
-void	            ft_lstdelone(t_list *alst, void (*del)(void *));
+void				ft_lstdelone(t_list *alst, void (*del)(void *));
 void				ft_lstdel(t_list **alst, void (*del)(void *));
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
@@ -72,6 +72,6 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
-void	            ft_putendl_fd(char const *s, int fd);
+void				ft_putendl_fd(char const *s, int fd);
 
 #endif

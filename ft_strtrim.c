@@ -12,24 +12,24 @@
 
 #include "libft.h"
 
-int in_set(char const *set, char symbol)
+static int		in_set(char const *set, char symbol)
 {
-    int 	in_set;
+	int		in_set;
 
-    in_set = 0;
-    while (*set != '\0')
+	in_set = 0;
+	while (*set != '\0')
 	{
-    	if (*set == symbol)
+		if (*set == symbol)
 		{
 			in_set = 1;
 			break ;
 		}
 		++set;
 	}
-    return in_set;
+	return (in_set);
 }
 
-static size_t		find_begin(char const *s, char const *set)
+static size_t	find_begin(char const *s, char const *set)
 {
 	int		i;
 
@@ -39,7 +39,7 @@ static size_t		find_begin(char const *s, char const *set)
 	return (i);
 }
 
-static size_t		find_end(char const *s, char const *set)
+static size_t	find_end(char const *s, char const *set)
 {
 	int		i;
 
@@ -49,7 +49,7 @@ static size_t		find_end(char const *s, char const *set)
 	return (i);
 }
 
-static char			*zero_str(void)
+static char		*zero_str(void)
 {
 	char	*str;
 
@@ -59,7 +59,7 @@ static char			*zero_str(void)
 	return (str);
 }
 
-char				*ft_strtrim(char const *s, char const *set)
+char			*ft_strtrim(char const *s, char const *set)
 {
 	char		*new_str;
 	size_t		begin;
